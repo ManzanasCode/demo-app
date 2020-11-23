@@ -17,6 +17,7 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
 
 // environment
 import { environment } from '../environments/environment';
+import { AccesoService } from '../app/services/acceso.service'
 
 @NgModule({
   declarations: [AppComponent],
@@ -29,6 +30,7 @@ import { environment } from '../environments/environment';
   providers: [
     StatusBar,
     SplashScreen,
+    AccesoService,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

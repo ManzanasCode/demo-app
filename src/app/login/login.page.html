@@ -6,12 +6,11 @@
 
     <ion-img src="assets/candado.jpg" class="logo"></ion-img>
 
-    <form autocomplete="off">
+    <form autocomplete="off" (ngSubmit)="acceso()" #loginForm="ngForm">
       <ion-row class="form-login">
         <ion-col size="12" class="ion-text-center">
           <ion-item>
-
-            <ion-input placeholder="Usuario"></ion-input>
+            <ion-input [(ngModel)]="credenciales.usuario" name="Usuario" type="text" placeholder="Usuario" ></ion-input>
           </ion-item>
         </ion-col>
       </ion-row>
@@ -19,7 +18,7 @@
       <ion-row class="form-login">
         <ion-col size="12" class="ion-text-center">
           <ion-item>
-            <ion-input placeholder="Contraseña"></ion-input>
+            <ion-input [(ngModel)]="credenciales.pwd" name="Contraseña" type="password" placeholder="Contraseña"></ion-input>
           </ion-item>
         </ion-col>
       </ion-row>
